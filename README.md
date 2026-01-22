@@ -20,6 +20,8 @@ Practice structured, readable, and maintainable code design
 Sprint Breakdown
 Goal: Allow users to navigate the program and select math operations.
 
+Sprint 1 – Menu & Option Selector
+
 Features:
 
 Program title and main menu display
