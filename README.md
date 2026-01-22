@@ -2,7 +2,7 @@
 
 The Math Practice Program is a console-based application designed to help users practice fundamental math operations, including addition, subtraction, multiplication, and division. The program uses a menu-driven interface and tracks user performance across sessions.
 
-This project was developed as part of a SCRUM-based C++ coding assignment, where functionality was incrementally delivered across three sprints following Agile principles.
+This project was developed as part of a SCRUM-based C coding assignment, where functionality was incrementally delivered across three sprints following Agile principles.
 
 
 ** Project Objectives **
@@ -59,7 +59,7 @@ Resume progress across sessions
 
 ** Technologies Used **
 
-C / C++
+C
 
 SCRUM / Agile methodology
 
