@@ -1,1 +1,5 @@
-
+int additionPractice();
+int subtractionPractice();
+int multiplicationPractice();
+int divisionPractice();
+void showStatistics(int numProblems, int correctAnswers);
