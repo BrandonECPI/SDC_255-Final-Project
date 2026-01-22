@@ -4,10 +4,23 @@
 #include <ctype.h>
 
 
-char getSelection(void) {
-    char selection;
-    scanf_s(" %c", &selection, 1);
-
-    selection = (char)toupper((unsigned char)selection);
-    return selection;
-}
+  switch (selection) {
+            case 'A':
+                result = additionPractice();
+                break;
+            case 'B':
+                result = subtractionPractice();
+                break;
+            case 'C':
+                result = multiplicationPractice();
+                break;
+            case 'D':
+                result = divisionPractice();
+                break;
+            case 'E':
+                showStatistics(numProblems, correctAnswers);
+                return 0;
+            default:
+                printf("Please enter a valid letter.\n");
+                continue;
+        }
