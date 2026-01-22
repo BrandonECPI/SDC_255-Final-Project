@@ -4,7 +4,7 @@
 #include <ctype.h>
 
 
-int additionPractice(void) {
+int additionPractice() {
     int num1 = rand() % 100 + 1;
     int num2 = rand() % 100 + 1;
     int solution = num1 + num2;
@@ -22,7 +22,7 @@ int additionPractice(void) {
     }
 }
 
-int subtractionPractice(void) {
+int subtractionPractice() {
     int num1 = rand() % 100 + 1;
     int num2 = rand() % 100 + 1;
     int solution = num1 - num2;
