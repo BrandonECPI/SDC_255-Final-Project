@@ -1,5 +1,17 @@
-int additionPractice();
-int subtractionPractice();
-int multiplicationPractice();
-int divisionPractice();
-void showStatistics(int numProblems, int correctAnswers);
+#include <stdio.h>
+#include <ctype.h>
+#include "menu.h"
+
+char showMenu() {
+    char selection;
+
+    printf("\nEnter 'A' for Addition Practice\n");
+    printf("Enter 'B' for Subtraction Practice\n");
+    printf("Enter 'C' for Multiplication Practice\n");
+    printf("Enter 'D' for Division Practice\n");
+    printf("Enter 'E' to exit program\n");
+    printf("Please make your selection.\n");
+
+    scanf_s(" %c", &selection, 1);
+    return toupper(selection);
+}
