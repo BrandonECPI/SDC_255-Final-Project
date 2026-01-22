@@ -4,9 +4,6 @@
 
 char getSelection(void) {
     char selection;
-
-    // Using scanf_s since your original code uses it (MSVC).
-    // If you're not using MSVC, swap scanf_s -> scanf.
     scanf_s(" %c", &selection, 1);
 
     selection = (char)toupper((unsigned char)selection);
