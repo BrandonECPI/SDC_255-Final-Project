@@ -1,8 +1,7 @@
 #include <stdio.h>
-#include "integration.h"
-#include "calculation1.h"
-#include "calculation2.h"   // Sprint 3 provides this
-#include "file_io.h"        // Sprint 3 provides this
+#include <stdlib.h>
+#include <time.h>
+#include <ctype.h>
 
 int runPracticeRound(char selection, int *numProblems, int *correctAnswers) {
     int result = 0;
