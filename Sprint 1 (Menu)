@@ -2,7 +2,6 @@
 #include "menu.h"
 
 void printTitle(void) {
-    // Keeping your original title text
     char title[] = "Jenice, Brandon, Max, Bryan's Math Program Practice Main Menu";
     puts(title);
 }
