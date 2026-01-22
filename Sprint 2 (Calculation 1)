@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "calculation1.h"
+#include <time.h>
+#include <ctype.h>
+
 
 int additionPractice(void) {
     int num1 = rand() % 100 + 1;
