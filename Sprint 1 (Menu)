@@ -1,4 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <ctype.h>
+
 
 void printTitle(void) {
     char title[] = "Jenice, Brandon, Max, Bryan's Math Program Practice Main Menu";
