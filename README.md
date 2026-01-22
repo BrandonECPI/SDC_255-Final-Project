@@ -1,18 +1,12 @@
-Project Overview
+Project Overview:
 
 The Math Practice Program is a console-based application designed to help users practice fundamental math operations, including addition, subtraction, multiplication, and division. The program uses a menu-driven interface and tracks user performance across sessions.
 
 This project was developed as part of a SCRUM-based C++ coding assignment, where functionality was incrementally delivered across three sprints following Agile principles.
 
-Project Objectives
-
-Reinforce understanding of basic arithmetic operations
-
-Demonstrate modular programming using functions and separate files
+Project Objectives:
 
 Apply SCRUM methodology by dividing work into logical sprints
-
-Implement file input/output to persist user statistics
 
 Practice structured, readable, and maintainable code design
 
@@ -59,17 +53,13 @@ Read statistics from a file on program startup
 
 Resume progress across sessions
 
-Technologies Used
+Technologies Used:
 
 C / C++ (procedural programming)
 
-Standard libraries (stdio.h, stdlib.h, time.h, ctype.h)
-
-File input/output
-
 SCRUM / Agile methodology
 
-Authors
+Authors:
 
 Brandon Lazala
 
