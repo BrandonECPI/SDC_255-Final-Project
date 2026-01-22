@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "calculation2.h"
+
 
 int multiplicationPractice(void) {
     int num1 = rand() % 100 + 1;
