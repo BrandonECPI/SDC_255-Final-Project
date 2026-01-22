@@ -3,49 +3,51 @@
 #include <time.h>
 #include <ctype.h>
 
-int runPracticeRound(char selection, int *numProblems, int *correctAnswers) {
-    int result = 0;
+int main() {
+    char selection;
+    int numProblems = 0;
+    int correctAnswers = 0;
 
-    switch (selection) {
-        case 'A':
-            result = additionPractice();
-            break;
-        case 'B':
-            result = subtractionPractice();
-            break;
-        case 'C':
-            result = multiplicationPractice(); // from Sprint 3
-            break;
-        case 'D':
-            result = divisionPractice(); // from Sprint 3
-            break;
-        case 'E':
-            // On exit: show stats and save them (Sprint 3 write function)
-            showStatistics(*numProblems, *correctAnswers);
-            writeStatsToFile("stats.txt", *numProblems, *correctAnswers);
-            return -1;
+    srand(time(NULL));
+	
+	char title[] = "Jenice, Brandon, Max, and Bryan's Math Program Practice Main Menu";
+	puts(title);
+	
+		
+    while (1) {
+        printf("\nEnter 'A' for Addition Practice\n");
+        printf("Enter 'B' for Subtraction Practice\n");
+        printf("Enter 'C' for Multiplication Practice\n");
+        printf("Enter 'D' for Division Practice\n");
+        printf("Enter 'E' to exit program\n");
+        printf("Please make your selection.\n");
+        scanf(" %c", &selection, 1);
+		selection = toupper(selection); 
+		
+        int result = 0;
 
-        default:
-            printf("Please enter a valid letter.\n");
-            return 0;
-    }
+        switch (selection) {
+            case 'A':
+                result = additionPractice();
+                break;
+            case 'B':
+                result = subtractionPractice();
+                break;
+            case 'C':
+                result = multiplicationPractice();
+                break;
+            case 'D':
+                result = divisionPractice();
+                break;
+            case 'E':
+                showStatistics(numProblems, correctAnswers);
+                return 0;
+            default:
+                printf("Please enter a valid letter.\n");
+                continue;
+        }
 
-    // A, B, C, D all count as a problem attempt
-    (*numProblems)++;
-    if (result == 1) (*correctAnswers)++;
-
-    // Optional: also save after each problem attempt (shows progress)
-    writeStatsToFile("stats.txt", *numProblems, *correctAnswers);
-
-    return 1;
-}
-
-void showStatistics(int numProblems, int correctAnswers) {
-    printf("\nThanks for using Jenice Curry's Math Practice Program.\n");
-    printf("You attempted %d problems and got %d correct.\n", numProblems, correctAnswers);
-
-    if (numProblems > 0) {
-        float percent = ((float)correctAnswers / numProblems) * 100.0f;
-        printf("For a percentage correct of %.2f%%.\n", percent);
+        numProblems++;
+        if (result == 1) correctAnswers++;
     }
 }
