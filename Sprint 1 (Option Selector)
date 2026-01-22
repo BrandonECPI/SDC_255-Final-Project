@@ -24,3 +24,5 @@
                 printf("Please enter a valid letter.\n");
                 continue;
         }
+
+    
