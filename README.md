@@ -12,6 +12,7 @@ Practice structured, readable, and maintainable code design
 
 
 Sprint Breakdown
+
 Goal: Allow users to navigate the program and select math operations.
 
 Sprint 1 – Menu & Option Selector
@@ -26,6 +27,7 @@ Option selector that routes user choices to the correct function
 
 
 Sprint 2 – Main Integration & Calculation 1
+
 Goal: Integrate core program logic and implement basic calculations.
 
 Features:
@@ -39,6 +41,7 @@ Subtraction practice function
 Problem tracking (attempted vs. correct)
 
 Sprint 3 – Advanced Calculations & File I/O
+
 Goal: Expand functionality and add data persistence.
 
 Features:
