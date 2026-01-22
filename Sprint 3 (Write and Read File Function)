@@ -1,30 +1,33 @@
 #include <stdio.h>
-#include "file_io.h"
+#include <stdlib.h>
+#include <time.h>
+#include <ctype.h>
 
-void writeStatsToFile(const char *filename, int numProblems, int correctAnswers) {
-    FILE *fp = NULL;
+//printf provides output, which is the write function. Which provides the output of the code inside each function.
+//scanf provides input, which is the read function. Which retrieves information from the user.
 
-if (fopen_s(&fp, filename, "w") != 0 || fp == NULL) {
-        return; // silently fail to keep UX simple
+int divisionPractice() {
+    int num2 = rand() % 100 + 1; 
+    int solution = rand() % 100 + 1;
+    int num1 = num2 * solution;
+    int userResponse;
+
+    printf("Please divide these numbers. Enter answer to closest whole number.\n%d / %d = ", num1, num2);
+    scanf("%d", &userResponse);
+
+    if (userResponse == solution) {
+        printf("Correct\n");
+        return 1;
+    } else {
+        printf("Incorrect\n");
+        return 0;
     }
-
-    // Very simple format: two integers
-    fprintf(fp, "%d %d\n", numProblems, correctAnswers);
-    fclose(fp);
 }
-
-int readStatsFromFile(const char *filename, int *numProblems, int *correctAnswers) {
-    FILE *fp = NULL;
-
-    if (fopen_s(&fp, filename, "r") != 0 || fp == NULL) {
-        return 0;
+void showStatistics(int numProblems, int correctAnswers) {
+    printf("\nThanks for using Jenice, Brandon, Max, Bryan's' Math Practice Program.\n");
+    printf("You attempted %d problems and got %d correct.\n", numProblems, correctAnswers);
+    if (numProblems > 0) {
+        float percent = ((float)correctAnswers / numProblems) * 100;
+        printf("For a percentage correct of %.2f%%.\n", percent);
     }
-
-    if (fscanf(fp, "%d %d", numProblems, correctAnswers) != 2) {
-        fclose(fp);
-        return 0;
-    }
-
-    fclose(fp);
-    return 1;
 }
