@@ -4,8 +4,7 @@
 void writeStatsToFile(const char *filename, int numProblems, int correctAnswers) {
     FILE *fp = NULL;
 
-    // Using fopen_s for MSVC. If not using MSVC, replace with: fp = fopen(filename, "w");
-    if (fopen_s(&fp, filename, "w") != 0 || fp == NULL) {
+if (fopen_s(&fp, filename, "w") != 0 || fp == NULL) {
         return; // silently fail to keep UX simple
     }
 
@@ -17,7 +16,6 @@ void writeStatsToFile(const char *filename, int numProblems, int correctAnswers)
 int readStatsFromFile(const char *filename, int *numProblems, int *correctAnswers) {
     FILE *fp = NULL;
 
-    // Using fopen_s for MSVC. If not using MSVC, replace with: fp = fopen(filename, "r");
     if (fopen_s(&fp, filename, "r") != 0 || fp == NULL) {
         return 0;
     }
